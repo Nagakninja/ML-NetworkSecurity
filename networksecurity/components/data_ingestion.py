@@ -85,7 +85,7 @@ class DataIngestion:
 
             
         except Exception as e:
-            raise NetworkSecurityException(e,sys)
+            raise NetworkSecurityException(str(e), sys)
         
         
     def initiate_data_ingestion(self):
@@ -98,4 +98,4 @@ class DataIngestion:
             return dataingestionartifact
 
         except Exception as e:
-            raise NetworkSecurityException
+            raise NetworkSecurityException(e,sys)
